@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:text="@string/title_settings"
+        android:layout_margin="24dp"
+        android:fontFamily="@font/google_sans_medium"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_cards_number"
+        android:fontFamily="@font/google_sans"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+
+    <com.warkiz.widget.IndicatorStayLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        >
+
+        <com.warkiz.widget.IndicatorSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_max="@integer/card_number_max"
+            app:isb_min="@integer/card_number_min"
+            app:isb_progress="@integer/card_number_min"
+            app:isb_ticks_count="4"
+            app:isb_show_tick_marks_type="oval"
+            app:isb_show_indicator="circular_bubble"
+            app:isb_track_progress_color="@color/colorAccent"
+            />
+
+    </com.warkiz.widget.IndicatorStayLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nickname"
+        android:fontFamily="@font/google_sans"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="64dp"
+        android:hint="@string/default_nickname"
+        android:fontFamily="@font/google_sans"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>
